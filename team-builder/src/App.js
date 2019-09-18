@@ -41,7 +41,7 @@ export default function App() {
     // we have the new value for the role input inside e.target.value
     setMemberForm({
       name: memberForm.name,
-      age: memberForm.email,
+      email: memberForm.email,
       role: e.target.value
     });
   };
@@ -69,8 +69,8 @@ export default function App() {
         memberForm={memberForm}
         onFormSubmit={onFormSubmit}
       />
-      {initialTeamList.map(friend => (
-        <h5 key={friend.id}>
+      {teamList.map(friend => (
+        <h5 key={friend}>
           {friend.name} is a {friend.role}.
         </h5>
       ))}
